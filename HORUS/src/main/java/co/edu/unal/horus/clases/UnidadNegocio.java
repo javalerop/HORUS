@@ -15,6 +15,5 @@ public class UnidadNegocio {
         this.nombre = nombre;
     }
     
-    
-    
+     
 }
