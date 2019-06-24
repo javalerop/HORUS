@@ -7,14 +7,14 @@ import java.util.List;
 /**
  * @author montenegro & @author valero
  */
-public class UnidadNegocio {
+public class Supervisor {
     
     private String nombre;
-    private List<Proceso> procesos;
+    private List<Lider> lideres;
 
-    public UnidadNegocio(String nombre) {
+    public Supervisor(String nombre) {
         this.nombre = nombre;
-        procesos = new ArrayList<>();
+        lideres = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -25,12 +25,12 @@ public class UnidadNegocio {
         this.nombre = nombre;
     }
 
-    public List<Proceso> getProcesos() {
-        return procesos;
+    public List<Lider> getLideres() {
+        return lideres;
     }
 
-    public void setProcesos(List<Proceso> procesos) {
-        this.procesos = procesos;
+    public void setLideres(List<Lider> lideres) {
+        this.lideres = lideres;
     }
-     
+    
 }

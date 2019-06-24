@@ -7,14 +7,14 @@ import java.util.List;
 /**
  * @author montenegro & @author valero
  */
-public class UnidadNegocio {
+public class Representante {
     
     private String nombre;
-    private List<Proceso> procesos;
+    private List<Mes> meses;
 
-    public UnidadNegocio(String nombre) {
+    public Representante(String nombre) {
         this.nombre = nombre;
-        procesos = new ArrayList<>();
+        meses = new ArrayList<>();
     }
 
     public String getNombre() {
@@ -25,12 +25,14 @@ public class UnidadNegocio {
         this.nombre = nombre;
     }
 
-    public List<Proceso> getProcesos() {
-        return procesos;
+    public List<Mes> getMeses() {
+        return meses;
     }
 
-    public void setProcesos(List<Proceso> procesos) {
-        this.procesos = procesos;
+    public void setMeses(List<Mes> meses) {
+        this.meses = meses;
     }
-     
+    
+    
+    
 }
