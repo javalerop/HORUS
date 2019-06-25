@@ -17,9 +17,10 @@ import org.apache.poi.ss.usermodel.Workbook;
 public class ConstructorClases {
     
     public void leer_excel(String nombre_archivo){
+        public void leer_excel(String nombre_archivo){
         try{
             FileInputStream archivo = new FileInputStream(nombre_archivo);
-            Workbook libro = new Workbook(archivo);
+            Workbook libro = new XSSFWorkbook(archivo);
             Sheet hoja = (Sheet) libro.getSheet("Base datos TMC");
             Iterator<Row> iterador_filas = hoja.iterator();
             
@@ -28,13 +29,28 @@ public class ConstructorClases {
                 Iterator<Cell> iterador_celdas = siguiente_fila.cellIterator();
                 
                 while (iterador_celdas.hasNext()) {
-                    Cell celda = 
+                    Cell celda = iterador_celdas.next();
+                    
+                    switch (celda.getCellType()) {
+                        case STRING:
+                            System.out.println(celda.getStringCellValue());
+                            break;
+                        case NUMERIC:
+                            System.out.println(celda.getNumericCellValue());
+                            break;
+                        default:
+                            System.out.println(celda.getStringCellValue());
+                    }
+                    System.out.println(" - ");
                 }
+                System.out.println("");
             }
-            
+            libro.close();
+            archivo.close();
         }catch(IOException ex){
             System.out.println(ex.getMessage());
         }
-    }
+    } 
+    } 
     
 }
