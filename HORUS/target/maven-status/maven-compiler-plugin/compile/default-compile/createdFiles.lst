@@ -1,8 +1,8 @@
 co/edu/unal/horus/clases/Mes.class
 co/edu/unal/horus/clases/Dia.class
 co/edu/unal/horus/clases/Skill.class
-co/edu/unal/horus/clases/UnidadNegocio.class
 co/edu/unal/horus/clases/Supervisor.class
+co/edu/unal/horus/clases/UnidadNegocio.class
 co/edu/unal/horus/clases/Proceso.class
 co/edu/unal/horus/clases/Principal.class
 co/edu/unal/horus/clases/Representante.class
